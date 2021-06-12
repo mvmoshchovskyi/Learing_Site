@@ -2,31 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>My Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport site</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+          integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous"/>
 </head>
 <body>
 
-<header class='header'>
-    <div class="container">
-        <div class="header__inner">
-            <nav class="nav">
-                <a class="nav__link" href="#">Main</a>
-                <a class="nav__link" href="#">Matches</a>
-                <a class="nav__link" href="#">News</a>
-                <a class="nav__link" href="#">Fans</a>
-                <a class="nav__link" href="#">Contacts</a>
-                <a class="nav__link" href="#">Admin</a>
-            </nav>
+<div class="container">
+    <nav>
+        <ul class="mainMenu">
+            <li><a href="#">Main</a></li>
+            <li class="dropdown">
+                <a class="dropdown__hover">
+                    Matches
+                </a>
+                <div class="dropdown__menu" >
+                    <a class="dropdown-item" href="matches.html">Calendar</a>
+                    <a class="dropdown-item" href="#">Next game</a>
+                    <a class="dropdown-item" href="#">Rating</a>
+                </div>
+            </li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Fans</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Admin</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+        </ul>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <div class="roller">
             <img src="assets/images/manchester-city-fc.png" width="125px" alt="logo">
-<!--            <div class="header_logo">My Site</div>-->
         </div>
+    </nav>
+    <main>
+        <div class="main__image">
+            <img src="assets/images/image1.png" alt="logo">
+        </div>
+    </main>
+    <div id="content1">
+        <h1>History</h1>
+        <p>Manchester City Football Club is an English football club based in Manchester that competes in the Premier
+            League, the top flight of English football. Founded in 1880 as St. Mark's (West Gorton), it became Ardwick
+            Association Football Club in 1887 and Manchester City in 1894. The club's home ground is the Etihad Stadium
+            in east Manchester, to which it moved in 2003, having played at Maine Road since 1923. The club adopted
+            their sky blue home shirts in 1894 in the first season of the club's current iteration, and have been used
+            ever since.[4]
+
+            Manchester City entered the Football League in 1892, and won their first major honour with the FA Cup in
+            1904. The club had its first major period of success in the late 1960s, winning the League, European Cup
+            Winners Cup, FA Cup and League Cup under the management of Joe Mercer and Malcolm Allison. After losing the
+            1981 FA Cup Final, the club went through a period of decline, culminating in relegation to the third tier of
+            English football for the only time in its history in 1998. They since regained promotion to the top tier in
+            2001–02 and have remained a fixture in the Premier League since 2002–03.
+
+            In 2008, Manchester City was purchased by Abu Dhabi United Group for £210 million and received considerable
+            financial investment in both playing staff and club facilities, including the £150 million Etihad Campus in
+            east Manchester.[5] Under the management of Pep Guardiola, the team won the Premier League in 2018, becoming
+            the only Premier League team to attain 100 points in a single season. In 2019, they won four trophies,
+            completing an unprecedented sweep of all domestic trophies in England and becoming the first English men's
+            team to win the domestic treble.[6]
+
+            Manchester City's revenue was the fifth-highest of a football club in the world in the 2018–19 season at
+            €568.4 million.[7] In 2019, Forbes estimated the club was the fifth most valuable in the world at $2.69
+            billion.[8] The club is owned by the City Football Group, a British-based[9] holding company valued at £3.73
+            (US$4.8) billion in November 2019 following a 10% stake sale to Silver Lake.[10]</p>
     </div>
-</header>
-<div class="intro">
-    <div class="container">
+    <div class="text__image" id="content2"><img src="assets/images/bg-f.jpg" alt="logo"></div>
+    <div id="content3">
+        <h1>Honours</h1>
+        <p>Based on trophy count, Manchester City are one of the most successful teams in England – their twenty-eight
+            major domestic and European honours leave them fifth, above Tottenham Hotspur F.C., on the list of most
+            decorated sides in England.
+
+            The club's first major trophy was the 1904 FA Cup,[151] though they had previously won three Manchester Cups
+            before that point.[152] Their first top division league title came in the 1936–37 season,[11] with the first
+            Charity Shield won in the following August.[11] City's first League Cup and European trophy both came at the
+            end of the 1969–70 season, the two trophies also constituting the team's first trophy double.[11] In the
+            2018–19 season, City became the first team to claim all of the major English trophies available in a single
+            season, winning not just the Premier League, FA Cup, and League Cup, but also the Community Shield.[153]
+
+            Their 1970 Cup Winners' Cup victory remains City's only European trophy to date.[154] They also reached the
+            final of the Champions League in season 2020-21.
+
+            Manchester City jointly hold the record for most second division titles with Leicester City, both clubs
+            having won the league on seven occasions.[155] Their first victory was in 1898–99, and the most recent in
+            2001–02.[11]</p>
     </div>
+    <footer>
+        <h1>FC Manchester City</h1>
+    </footer>
 </div>
 
+<script src="./app.js"></script>
 </body>
 </html>
