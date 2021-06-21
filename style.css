@@ -12,15 +12,6 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-:root {
-    --main-radius: 5px;
-    --main-padding: 5px;
-}
-
-body {
-    font-family: "Inter", sans-serif;
-}
-
 .container {
     display: grid;
     height: 100vh;
@@ -41,50 +32,44 @@ body {
 
 nav {
     grid-area: nav;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    border-radius: 5px;
+    padding-top: 5px;
 }
 
 main {
     background: #84ffff;
     grid-area: main;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    border-radius: 5px;
+    padding-top: 5px;
 }
 
-#sidebar {
-    background: #18ffff;
-    grid-area: sidebar;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
-}
 
 #content1 {
     background: #6fffd2;
     grid-area: content1;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    border-radius: 5px;
+    padding-top: 5px;
 }
 
 #content2 {
     background: #64ffda;
     grid-area: content2;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    border-radius: 5px;
+    padding-top: 5px;
 }
 
 #content3 {
     background: #73ffba;
     grid-area: content3;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    border-radius: 5px;
+    padding-top: 5px;
 }
 
 footer {
     background: #1de9b6;
     grid-area: footer;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+    border-radius: 5px;
+    padding-top: 5px;
 }
 
 a {
@@ -130,10 +115,13 @@ nav .mainMenu li a {
     text-transform: uppercase;
     color: #fff;
     font-size: 1.5rem;
+    border-radius: 0
 }
 
 nav .mainMenu li a:hover {
     background: rgb(255, 94, 0);
+    border-radius: 50% 50%  ;
+    transition: all .9s;
 }
 
 nav .openMenu {
@@ -256,4 +244,48 @@ nav .logo {
 
 .dropdown:hover .dropdown__menu{
     display: block;
+}
+
+.footer-image:hover{
+    -webkit-animation-name: wobble-to-top-right;
+    animation-name: wobble-to-top-right;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes wobble-to-top-right {
+    16.65% {
+        -ms-transform: translate(8px, -8px);
+        -webkit-transform: translate(8px, -8px);
+        transform: translate(8px, -8px);
+    }
+    33.3% {
+        -ms-transform: translate(-6px, 6px);
+        -webkit-transform: translate(-6px, 6px);
+        transform: translate(-6px, 6px);
+    }
+    49.95% {
+        -ms-transform: translate(4px, -4px);
+        -webkit-transform: translate(4px, -4px);
+        transform: translate(4px, -4px);
+    }
+    66.6% {
+        -ms-transform: translate(-2px, 2px);
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+    83.25% {
+        -ms-transform: translate(1px, -1px);
+        -webkit-transform: translate(1px, -1px);
+        transform: translate(1px, -1px);
+    }
+    100% {
+        -ms-transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
 }
