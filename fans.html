@@ -39,16 +39,20 @@
     <main class ="comments">
         <h4 >Conversations</h4>
         <div class="container">
-            <div class="row" id="coments"></div>
+
             <div class="row">
                 <div class="col-sm-10 img-up" >
+                    <form>
                     <input type="text" name="coment-title" id="coment-header" placeholder="Your name">
                     <textarea id="new-coment" placeholder="Write your mind..."></textarea>
                     <button id="add-mind" type="submit" class="btn btn-custom" onclick="addComent()">
                         ADD TEXT
                     </button>
+                    </form>
                 </div>
             </div>
+            <hr>
+            <div class="row" id="coments"></div>
         </div>
     </main>
 

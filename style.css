@@ -316,7 +316,7 @@ nav .logo {
 .btn-custom {
     display:block;
     width: 150px;
-    margin: -7px 0 30px 0;
+    margin: 10px auto;
     border-radius: 0 0 3px 3px;
     font-weight: 600;
     font-size: 12px;
@@ -348,11 +348,11 @@ nav .logo {
 
 .coment {
     margin: 0 auto;
-    background-color: yellow;
-    font-size: 1.8vw;
+    background-color: white;
+    font-size: 1vw;
     width: 100%;
     color: black;
-    font-weight: 500;
+    font-weight: 400;
     opacity: 0.8;
 }
 
@@ -388,9 +388,11 @@ nav .logo {
     color:black;
     text-align: center;
     padding: 10px;
+    font-size: 20px;
 }
 
 .card {
+    border: 2px solid black;
     margin-top: 50px;
     transition: .5s;
     white-space: normal;
@@ -401,11 +403,15 @@ nav .logo {
 }
 
 .card:hover{
+    background-color: #6fffd2;
     transform: scale(1.05);
     transition-duration: .5s;
 }
 
 .card-body p{
+    text-align: center;
     font-size: 12px;
-    text-align: justify;
+
 }
+
+

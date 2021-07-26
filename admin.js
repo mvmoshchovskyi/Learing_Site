@@ -1,3 +1,9 @@
+function isOnline() {
+    return window.navigator.onLine;
+}
+
+const connectionStatus = isOnline()
+
 async function addNews() {
     let title = document.querySelector('#title').value;
     let description = document.querySelector('#text-news').value;
@@ -12,18 +18,26 @@ async function addNews() {
         alert('Text must be more than 20 symbols')
     }else {
         let newsItem = { title, description};
-        console.log(newsItem)
-        let news = await fetch('http://localhost:3000/news', {
-            method: "POST",
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(newsItem)
-        });
-        news = await news.json();
+
+        if (!connectionStatus) {
+            let existing = localStorage.getItem('newsItem') ? JSON.parse(localStorage.getItem('newsItem')) : []
+            existing.push(newsItem)
+            localStorage.setItem('newsItem', JSON.stringify(existing))
+        } else {
+            let news = await fetch('http://localhost:3000/news', {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(newsItem)
+            });
+            window.location.href = "news.html";
+        }
+
+
         document.querySelector('#title').value = '';
         document.querySelector('#text-news').value = '';
-        window.location.href = "news.html";
+
     }
 }
 
